@@ -124,7 +124,7 @@ a{
 
 .card_1, .card_2{
     color: white;
-    width: 300px;
+    width: 280px;
     display: inline-block;
     background-color: #171E25;
     text-align: left;
@@ -322,6 +322,10 @@ a{
         border-top: 1px dotted rgb(200, 200, 200);
         position: static;
     } */
+}
+
+.button_link{
+    width: 60%;
 }
 
 @media (min-width:768px){
