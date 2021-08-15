@@ -29,14 +29,17 @@ textWriter($title)
 
 //EFEITO EXPANÇÃO DO LINK DOS CARDS
 
-const $card = document.querySelector('.card');
-const $button_link = document.querySelector('.button_link');
+var $card = document.querySelectorAll('.card');
 
-function toggleLink(toggleLink){
-    $button_link.classList.toggle('active');
+//função para adicionar a classe active no link dentro do card
+function toggleLink(){ 
+    this.querySelector('.button_link').classList.toggle('active')
 }
 
-const expand_Link = $card.addEventListener('mouseenter', toggleLink);
-const recue_Link = $card.addEventListener('mouseleave', toggleLink);
+//cada elemnto da nodelist receber um listener
 
+for (var i = 0; i < $card.length; i++){
+    var entermouse = $card.item(i).addEventListener('mouseenter', toggleLink);
+    var leavemouse = $card.item(i).addEventListener('mouseleave', toggleLink);
+}
 })()

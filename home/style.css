@@ -1,0 +1,516 @@
+body{
+    background-color: #012840;
+    color: #D0F2F2;
+    /* font-family: 'Roboto Mono', monospace; */
+    font-family: 'Rubik', sans-serif;
+    margin: 0px;
+    /* padding: 0px 200px 0px 200px; */
+
+}
+
+
+/* Color Theme Swatches in Hex */
+.color-theme_746ef1959b2851d22da02ea3898b38f6-1-hex { color: #012840; }
+.color-theme_746ef1959b2851d22da02ea3898b38f6-2-hex { color: #175973; }
+.color-theme_746ef1959b2851d22da02ea3898b38f6-3-hex { color: #2999A6; }
+.color-theme_746ef1959b2851d22da02ea3898b38f6-4-hex { color: #7ED9D9; }
+.color-theme_746ef1959b2851d22da02ea3898b38f6-5-hex { color: #D0F2F2; }
+
+/* Color Theme Swatches in RGBA */
+.color-theme_746ef1959b2851d22da02ea3898b38f6-1-rgba { color: rgba(1, 40, 64, 1); }
+.color-theme_746ef1959b2851d22da02ea3898b38f6-2-rgba { color: rgba(23, 89, 115, 1); }
+.color-theme_746ef1959b2851d22da02ea3898b38f6-3-rgba { color: rgba(41, 153, 166, 1); }
+.color-theme_746ef1959b2851d22da02ea3898b38f6-4-rgba { color: rgba(126, 217, 217, 1); }
+.color-theme_746ef1959b2851d22da02ea3898b38f6-5-rgba { color: rgba(208, 242, 242, 1); }
+
+/* Color Theme Swatches in HSLA */
+.color-theme_746ef1959b2851d22da02ea3898b38f6-1-hsla { color: hsla(202, 96, 12, 1); }
+.color-theme_746ef1959b2851d22da02ea3898b38f6-2-hsla { color: hsla(196, 66, 27, 1); }
+.color-theme_746ef1959b2851d22da02ea3898b38f6-3-hsla { color: hsla(186, 60, 40, 1); }
+.color-theme_746ef1959b2851d22da02ea3898b38f6-4-hsla { color: hsla(180, 54, 67, 1); }
+.color-theme_746ef1959b2851d22da02ea3898b38f6-5-hsla { color: hsla(180, 56, 88, 1); }
+
+
+/* NORMALIZER-----------------------------------------------------------*/
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #D0F2F2;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* NORMALIZER-----------------------------------------------------------*/
+
+/* MENU-----------------------------------------------------------------*/
+
+.header{
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #175973;
+    display: inline-block;
+    height: 70px;
+    margin: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    z-index: 20;
+}
+
+.logo{
+    display: inline-block;
+}
+
+.logo img{
+    height: 70px;
+}
+.nav{
+    width: 50%;
+    float: right;
+}
+
+#btn_mobile{
+    float: right;
+    display: none;
+}
+
+#menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+#menu a{
+    display: inline-block; 
+    padding: 23px;
+    white-space: nowrap;
+}
+#menu a:hover{
+    color:white;
+    transition: color .8s;
+}
+
+
+/* MENU-----------------------------------------------------------------*/
+
+.main{
+    background-color: #012840;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 170px 0;
+}
+.main__title{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 80px;
+    text-align: center;
+}
+.main__title::after{
+    content: '|';
+    margin-left: 1px;
+    opacity: 0;
+    animation: blink .7s 3.5;
+}
+
+
+@keyframes blink{
+    0%, 100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+
+.main li{
+    display: inline-block;
+    margin: 2px;
+    /* color: #D0F2F2; */
+}
+.portifolio{
+    width: 100%;
+    display: inline-block;
+    background-color: #175973;
+}
+
+
+.portifolio__text, .portifolio__container {
+    display: inline-block;
+    background-color: #175973;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.portifolio__container{
+    float: right;
+    text-align: center;
+    width: 70%;
+}
+.portifolio__text{
+    width: 30%;
+    height: 380px;
+    position: relative;
+    background-color: #175973;
+}
+
+.container__title{
+     text-align: center;
+}
+
+.text_link, .portifolio_link{
+    font-size: 1.2em;
+    background-color: #012840;
+    text-align: center;
+    border-radius: 50px;
+    display: inline-block;
+    width: 200px;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+.text_link{
+    position: absolute;
+    bottom: 10px;
+}
+.text_link:hover, .portifolio_link:hover{
+    box-shadow: 0px 0px 4px 1px #012840;
+}
+
+.container__cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.card_1, .card_2{
+    color: #D0F2F2;
+    width: 320px;
+    display: inline-block;
+    background-color: #012840;
+    text-align: left;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    margin: 20px 10px;
+}
+.card_2{
+    display: inline-block;
+}
+.card{
+    position: relative;
+}
+.card:hover{
+    box-shadow: 0px 0px 4px 1px #012840;
+}
+.card_link_all{
+  position: absolute; 
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+}
+
+.card_header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.button_link{
+    width: 10%;
+    border-radius: 50px;
+    background-color: #D0F2F2;
+    padding: 5px 5px ;
+    color: #D0F2F2;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: nowrap;
+    z-index: 5;
+    position: relative;
+    transition: 2.0s;
+}
+.button_link.active p {
+   display: inline-block;
+   transition: 2.0s;
+}
+.button_link.active{
+    width: 50%;
+    transition: .8s;
+}
+
+.button_link p{
+    color: #171E25;
+    text-align: center;
+    margin: 0px;
+    padding-left: 5px;
+    white-space: nowrap;
+}
+.button_link img{
+    border-radius: 50px;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+.button_link_all{
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+}
+.tag_html{
+    color: #D0F2F2;
+    background-color: #E54C21;
+    border-radius: 50px;
+    padding: 0px 10px;
+}
+.tag_css{
+    color: #D0F2F2;
+    background-color: #0070BA;
+    border-radius: 50px;
+    padding: 0px 10px;
+}
+.tag_JS{
+    color: #012840;
+    background-color: #EFD81D;
+    border-radius: 50px;
+    padding: 0px 10px;
+}
+
+.footer{
+    text-align: center;
+    background-color: #012840;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width:992px){ /*ABAIXO DE 992PX!!!*/
+
+    #header{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    #btn_mobile{
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+        border: none;
+    }
+    #btn_mobile a{
+        display: inline-block;
+        background-color: #175973;
+        padding: 21px;
+    }
+    
+    
+    #menu{
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        height: 0px;
+        background-color: #175973;
+        visibility: hidden;
+        transition: .6s;
+        overflow: hidden;
+    }
+    #menu li a{
+        width: 100%;
+        padding: 20px;
+        text-align: left;
+        transition: 0.6s ease;   
+    }
+    #menu li a:hover{
+        background-color: #012840;
+        color: white;
+    }
+    #nav.active #menu{
+        visibility: visible;
+        height: 100vh;
+    }
+    .card_2{
+        display: none;
+    }
+    .portifolio__text{
+        width: 30%;
+        height: 381px;
+        background-color: #175973;
+    }
+}
+
+@media (max-width:768px){ /*ACIMA DE 768PX*/
+
+    .main__title{
+        font-size: 30px;
+        text-align: center;
+    }
+    .portifolio__text, .portifolio__container{
+        width: 100%;
+    }
+    .portifolio__text{
+        height: auto;
+    }
+    .text_link{
+        position: static;
+    }
+
+}
+@media (max-width:450px){
+    .portifolio__container, .container__title{
+        text-align: left;
+   }
+   .button_link{
+    width: 52%;
+   }
+}
+/*
+
+@media (max-width:600px){ /* ABAIXO DE 600PX
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .main{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 170px 0;
+    }
+    .main__title{
+        font-size: 30px;
+        text-align: center;
+    }
+    .main li{
+        display: inline-block;
+    }
+    .portifolio{
+        display: inline-block;
+    }
+    .portifolio__text, .portifolio__container {
+        margin: 10px;
+        padding: 10px;
+    }
+    .portifolio__container{
+        text-align: center;
+    }
+    .container__title{
+         text-align: center;
+    }
+    .card_2{
+        display: none;
+    }
+}
+@media (max-width:768px){ /*ABAIXO DE 768PX
+    .card_2{
+        display: none;
+    }
+}
+@media (min-width:768px){ /*ACIMA DE 768PX
+    .portifolio{
+        display: flex;
+        justify-content: space-around;
+    }
+    .portifolio__text, .portifolio__container {
+        width: 350px;
+        margin: 10px;
+        padding: 10px;
+    }
+    .portifolio__text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media (min-width:992px){ /* ACIMA DE 992
+    .card_2{
+        display: inline-block;
+        text-align: center;
+    }
+    .container__cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+    .portifolio__text{
+        width: 30%;
+    }
+    .portifolio__container{
+        width: 70%;
+    }
+}
+@media (max-width:992px){ /*ABAIXO DE 992PX!!!
+
+        #header{
+            justify-content: left;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            margin: 0;
+        }
+    
+        #btn_mobile{
+            display: block;
+            background-color: orange;
+            border: none;
+        }
+        #btn_mobile img{
+            margin: 20px;
+        }
+        
+        #menu{
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 70px;
+            right: 0px;
+            height: 0px;
+            background-color: #175973;
+            visibility: hidden;
+            transition: .6s;
+            z-index: 1000;
+            overflow: hidden;
+        }
+        #menu li a{
+            padding: 20px;
+            text-align: center;
+            transition: 0.6s ease;
+    
+            
+        }
+        #menu li a:hover{
+            background-color: #242d36;
+            color: white;
+        }
+        #nav.active #menu{
+            visibility: visible;
+            height: 100vh;
+        }
+        .card_2{
+            display: none;
+        }
+    }
+
+}

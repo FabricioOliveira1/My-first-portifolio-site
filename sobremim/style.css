@@ -1,7 +1,7 @@
 body{
-    background-color: #171E25;
-    color: white;
-    font-family: 'Roboto Mono', monospace;
+    background-color: #012840;
+    color: #D0F2F2;
+    font-family: 'Rubik', sans-serif;
     margin: 0px;
     /* padding: 0px 200px 0px 200px; */
 
@@ -15,149 +15,162 @@ ul{
 }
 a{
     text-decoration: none;
-    color: rgb(200, 200, 200);
+    color: #D0F2F2;
 }
 /* NORMALIZER-----------------------------------------------------------*/
 
 /* MENU-----------------------------------------------------------------*/
-
-#header{
+.header{
     font-size: 1.2rem;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #282828;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #175973;
+    display: inline-block;
     height: 70px;
     margin: 0px;
-    width: 100vw;
-    margin-left: -17px;
+    width: 100%;
     box-sizing: border-box;
-    border-bottom: 1px solid rgb(200, 200, 200);
+    font-family: 'Rubik', sans-serif;
+    z-index: 20;
+}
+
+.logo{
+    display: inline-block;
+}
+
+.logo img{
+    height: 70px;
+}
+.nav{
+    width: 50%;
+    float: right;
 }
 
 #btn_mobile{
+    float: right;
     display: none;
 }
 
 #menu{
+    width: 100%;
     display: flex;
-    gap: .5rem;
+    justify-content: space-between;
     list-style: none;
 }
 
 #menu a{
-    display: block; 
-    padding: .5rem;
+    display: inline-block; 
+    padding: 23px;
+    white-space: nowrap;
+}
+#menu a:hover{
+    color:white;
+    transition: color .8s;
 }
 
 /* MENU-----------------------------------------------------------------*/
 
 .main{
     margin-top: 70px;
-    padding: 20px;
+    
 }
 
 .container_title{
     font-size: 32px;
+    padding: 20px;
 }
 
 .text{
     display: inline-block;
     text-align: justify;
-    background-color: white;
-    border-radius: 20px;
+    background-color: #012840;
     padding: 20px;
-    margin-top: 20px;
+    
 }
 .text p{
-    /* margin-right: 30px; */
     width: auto;
     display: block;
-    color: black;
+    color: #D0F2F2;
 }
 .text h2{
-    color: black;
+    color: #D0F2F2;
 }
-/* .foto{
-    display: inline-block;
-    
-} */
 .foto{
     display: block;
-    float: right;
+    float: right;  
+    margin: 20px;
+    text-align: center;
+}
+.foto img{
     border-radius: 200px;
     width: 250px;
     height: 250px;
-    margin: 20px;
 }
 .footer{
     text-align: center;
-    border-top: 1px solid rgb(200, 200, 200);
-    background-color: #282828;
+    background-color: #175973;
     width: 100%;
     position: absolute;
     left: 0;
 }
 
-@media (max-width:600px){
-    body{
-        margin: 0px;
-        padding: 0px;
-    }
+@media (max-width:992px){ /*ABAIXO DE 992PX!!!*/
+
     #header{
-        background-color: #171E25;
-        justify-content: left;
         position: fixed;
         left: 0;
         top: 0;
         width: 100%;
-        margin: 0;
-        border-bottom: 1px dotted rgb(200, 200, 200);
-        z-index: 50;
     }
 
     #btn_mobile{
-        margin-left: 10px;
-        display: block;
-        background-color: #171E25;
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
         border: none;
     }
+    #btn_mobile a{
+        display: inline-block;
+        background-color: #175973;
+        padding: 21px;
+    }
+    
+    
     #menu{
-        display: block;
+        display: inline-block;
         position: absolute;
         width: 100%;
         top: 70px;
         right: 0px;
         height: 0px;
-        background-color: #171E25;
+        background-color: #175973;
         visibility: hidden;
         transition: .6s;
-        z-index: 1000;
         overflow: hidden;
     }
     #menu li a{
+        width: 100%;
         padding: 20px;
-        text-align: center;
-        border-bottom: #242d36 2px solid;
-        transition: 0.6s ease;
-
-        
+        text-align: left;
+        transition: 0.6s ease;   
     }
     #menu li a:hover{
-        background-color: #242d36;
+        background-color: #012840;
         color: white;
     }
     #nav.active #menu{
         visibility: visible;
         height: 100vh;
-        /* height: 268px; */
-        /* display: block; */
     }
+}
 
-    .card{
-        z-index: 40;
+@media (max-width:500px){
+    .text p{
+        width: 100%;
+        display: inline-block;
+    }
+    .foto{
+        float: none;
     }
 }
